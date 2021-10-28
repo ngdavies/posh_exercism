@@ -1,0 +1,4 @@
+Remember that the comparision operators are -eq for equals and -ne  for not equals
+Logical and is -and and logical or is -or. The things or'd and and'd may need to be in ()
+(True) -or (False) returns false.
+True -or False does not return anything.
