@@ -1,0 +1,8 @@
+Invoke a function definition from a file like this
+
+    . .\TwoFer.ps1
+
+Problem as defined has a compulsory parameter that can be null.
+Making the compulsory parameter optional did not make the tests pass.
+
+Powershell if statements are like C with compulsory {}
