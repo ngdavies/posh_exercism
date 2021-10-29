@@ -1,0 +1,5 @@
+.version
+.exercism
+*.md
+*.tests.ps1
+scratch/
