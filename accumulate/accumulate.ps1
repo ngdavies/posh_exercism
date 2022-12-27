@@ -33,5 +33,9 @@ Function Get-Accumulation() {
         [scriptblock]$Func
     )
 
-    Throw "Function not implemented"
+    Write-Host "List: $List, Length $($List.Length), Type $($List.GetType())"
+    Write-Host "Function: $Func"
+
+    # $Func.Invoke($List)
+    Invoke-Command -ScriptBlock $Func -ArgumentList (,$List)
 }
