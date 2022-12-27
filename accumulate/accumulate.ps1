@@ -33,9 +33,6 @@ Function Get-Accumulation() {
         [scriptblock]$Func
     )
 
-    Write-Host "List: $List, Length $($List.Length), Type $($List.GetType())"
-    Write-Host "Function: $Func"
-
-    # $Func.Invoke($List)
-    Invoke-Command -ScriptBlock $Func -ArgumentList (,$List)
+    $Func.Invoke((,$List))
+    # Invoke-Command -ScriptBlock $Func -ArgumentList (,$List)
 }

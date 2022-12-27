@@ -29,12 +29,17 @@ Function Get-AccTry() {
     #>
     [CmdletBinding()]
     Param(
-        [PSObject]$Number,
+        [PSObject[]]$List,
         [scriptblock]$Func
     )
 
-    Write-Host $Number
-    Write-Host $Func
-    Write-Host $Func.Invoke($Number)
-    return $Func.Invoke($Number)
+    Write-Host "List: $List, Length $($List.Length)"
+    Write-Host "Function: $Func"
+    $List | %{$Func.Invoke($_)}
+    # $res = @()
+    # foreach ($t in $List) {
+    #     $res += $Func.Invoke($t)
+    #     Write-Host "Building results: $res"
+    # }
+    # $res
 }
